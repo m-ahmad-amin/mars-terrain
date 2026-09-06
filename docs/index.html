@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mars-terrain</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <strong>mars-terrain</strong>
+    <span class="sep">local map</span>
+    <button type="button" id="play">Play</button>
+    <button type="button" id="step">Step</button>
+    <select id="mode">
+      <option value="autonav">AutoNav</option>
+      <option value="blind">Blind</option>
+      <option value="guarded">Guarded</option>
+    </select>
+    <label><input type="checkbox" id="continuous" checked /> keep driving</label>
+    <select id="scenes"></select>
+    <input type="range" id="speed" min="40" max="240" value="110" title="speed" />
+  </header>
+
+  <div class="board">
+    <canvas id="map"></canvas>
+    <p id="wait">loading map…</p>
+    <figure class="pip">
+      <img id="cam" alt="" />
+      <figcaption id="camMeta">loading…</figcaption>
+    </figure>
+    <ul class="key">
+      <li><i class="soil"></i>soil</li>
+      <li><i class="bed"></i>bedrock</li>
+      <li><i class="sand"></i>sand</li>
+      <li><i class="big"></i>rock</li>
+    </ul>
+  </div>
+
+  <footer>
+    <b id="stStatus">…</b>
+    <span id="stSite"></span>
+    <span id="stSeen"></span>
+    <span id="stPath"></span>
+    <span id="stNote">click the map to drop a goal</span>
+  </footer>
+  <p class="banner">
+    Browser demo on saved maps. No model on this page.
+    <a href="https://github.com/m-ahmad-amin/mars-terrain">Clone the repo</a>
+    and run <code>python -m web.app</code> for live AutoNav on your machine.
+  </p>
+  <script src="sim.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

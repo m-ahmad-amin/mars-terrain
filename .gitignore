@@ -1,5 +1,6 @@
 data/
-docs/
+docs/linkedin/
+docs/storyboard/
 outputs/
 __pycache__/
 .ipynb_checkpoints/

@@ -9,8 +9,9 @@ mars-terrain is an end-to-end simulated autonomous navigation loop for a Mars ro
 NavCam inset + belief map. Cyan = AutoNav path. Dark cells are still unseen.
 
 ```text
-python -m web.app              # browser UI at http://127.0.0.1:8000
-python -m src.demo --labels    # old desktop window
+python -m web.app                               # browser UI at http://127.0.0.1:8000
+python -m http.server 8088 --directory docs     # demo UI at http://127.0.0.1:8088
+python -m src.demo --labels                     # old desktop window
 ```
 
 In the site: Play, click the map for a goal, switch AutoNav / Blind / Guarded. Continuous mode loads the next NavCam when this patch is finished.
