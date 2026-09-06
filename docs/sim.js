@@ -306,7 +306,7 @@ class DemoMission {
       seen: packSeen(s.seen),
       seen_frac: seenN / s.seen.length,
       path_len: s.path.length,
-      cam: this.scene.cam,
+      cam: new URL(this.scene.cam, document.baseURI).href,
     };
   }
 }

@@ -513,7 +513,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-fetch("data/scenes.json")
+fetch(new URL("data/scenes.json", document.baseURI))
   .then((r) => {
     if (!r.ok) throw new Error("missing scenes");
     return r.json();
