@@ -1,10 +1,12 @@
-# mars-terrain
+# Mars-Terrain
 
 **Real Mars imagery -> learned terrain perception -> partial map -> autonomous navigation -> replanning**
 
-mars-terrain is an end-to-end simulated autonomous navigation loop for a Mars rover. A DeepLabv3-ResNet50 model trained on real Curiosity NavCam imagery ([AI4Mars](https://github.com/nasa-jpl/AI4MARS)) does terrain segmentation. We project that into a local cost map. The rover only sees what’s in its camera FOV, grows a belief map as it moves, and runs A* to a goal you click. If newly seen terrain blocks the route, it replans.
+**[▶ Live Demo](https://m-ahmad-amin.github.io/mars-terrain/)**
 
-![AutoNav: camera + belief map, path updates as cells appear](figures/final.gif)
+Mars-Terrain is an end-to-end simulated autonomous navigation loop for a Mars rover. A DeepLabv3-ResNet50 model trained on real Curiosity NavCam imagery ([AI4Mars](https://github.com/nasa-jpl/AI4MARS)) does terrain segmentation. We project that into a local cost map. The rover only sees what’s in its camera FOV, grows a belief map as it moves, and runs A* to a goal you click. If newly seen terrain blocks the route, it replans.
+ 
+![AutoNav: camera + belief map, path updates as cells appear](figures/autonav.gif)
 
 NavCam inset + belief map. Cyan = AutoNav path. Dark cells are still unseen.
 
